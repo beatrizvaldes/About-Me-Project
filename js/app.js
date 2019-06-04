@@ -3,10 +3,10 @@
 var havePets = prompt('Do I have pets?');
 console.log(havePets); 
 
-if(havePets === "yes"){
+if(havePets.toLowerCase() === "yes"){
     alert('You are right!')
 }
-else if (havePets === "no"){
+else if (havePets.toLowerCase() === "no"){
     alert('Sorry! You are wrong');
 }
 else {
@@ -17,10 +17,10 @@ else {
 var likeHiking = prompt('Do you think I like hiking?');
 console.log(likeHiking); 
 
-if(likeHiking === "yes"){
+if(likeHiking.toLowerCase() === "yes"){
     alert('I hate hiking, so you are wrong')
 }
-else if (likeHiking === "no"){
+else if (likeHiking.toLowerCase() === "no"){
     alert('You are right, I hate hiking');
 }
 else {
@@ -31,10 +31,10 @@ else {
 var favBand = prompt('Is The Rolling Stones the best band on Earth?');
 console.log(favBand); 
 
-if(favBand === "yes"){
+if(favBand.toLowerCase() === "yes"){
     alert('They are good, but not the best of the whoooooole world. Sorry, you are wrong')
 }
-else if (favBand === "no"){
+else if (favBand.toLowerCase() === "no"){
     alert('Very real my friend. I don\'t think they are the best band on Earth, so you are right in this one!');
 }
 else {
@@ -45,10 +45,10 @@ else {
 var likeSeattle = prompt('Do I like Seattle weather?');
 console.log(likeSeattle); 
 
-if(likeSeattle === "yes"){
+if(likeSeattle.toLowerCase() === "yes"){
     alert('I love the rain, so you guessed it right!')
 }
-else if (likeSeattle === "no"){
+else if (likeSeattle.toLowerCase() === "no"){
     alert('Oh please! The summer here is amazing! I love Seattle weather so you are wrong!');
 }
 else {
@@ -59,10 +59,10 @@ else {
 var favFood = prompt('Is pizza my favorite food?');
 console.log(favFood); 
 
-if(favFood === "yes"){
+if(favFood.toLowerCase() === "yes"){
     alert('WROOOOONG! My favorite food is pasta!')
 }
-else if (favFood === "no"){
+else if (favFood.toLowerCase() === "no"){
     alert('DING DING! Correct! My favorite food is pasta ');
 }
 else {
