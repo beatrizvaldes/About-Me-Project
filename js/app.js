@@ -1,7 +1,7 @@
 'use strict';
 
 var havePets = prompt('Do I have pets?');
-console.log(havePets); 
+console.log('Thinks that I have pets ' + havePets); 
 
 if(havePets.toLowerCase() === "yes"){
     alert('You are right!')
@@ -15,7 +15,7 @@ else {
 
 
 var likeHiking = prompt('Do you think I like hiking?');
-console.log(likeHiking); 
+console.log('Thinks that I like hiking ' + likeHiking); 
 
 if(likeHiking.toLowerCase() === "yes"){
     alert('I hate hiking, so you are wrong')
@@ -29,7 +29,7 @@ else {
 
 
 var favBand = prompt('Is The Rolling Stones the best band on Earth?');
-console.log(favBand); 
+console.log('Thinks The Rolling Stones is the best band on Earth ' + favBand); 
 
 if(favBand.toLowerCase() === "yes"){
     alert('They are good, but not the best of the whoooooole world. Sorry, you are wrong')
@@ -43,7 +43,7 @@ else {
 
 
 var likeSeattle = prompt('Do I like Seattle weather?');
-console.log(likeSeattle); 
+console.log('Thinks I like Seattle weather ' + likeSeattle); 
 
 if(likeSeattle.toLowerCase() === "yes"){
     alert('I love the rain, so you guessed it right!')
@@ -57,7 +57,7 @@ else {
 
 
 var favFood = prompt('Is pizza my favorite food?');
-console.log(favFood); 
+console.log('Thinks my favorite food is pizza ' + favFood); 
 
 if(favFood.toLowerCase() === "yes"){
     alert('WROOOOONG! My favorite food is pasta!')
