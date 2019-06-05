@@ -24,13 +24,15 @@ h1 {
 }
 
 main {
+    background-color:lightcyan;
     border-color: pink;
     border-style: groove;
     border-width: 10%;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 50px;
     padding: 20px;
     text-align: center;
-    margin-right: 200px;
-    margin-left: 200px;
 }
 
 footer {
