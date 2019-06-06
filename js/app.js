@@ -1,5 +1,8 @@
 'use strict';
 
+var askName = prompt('Are you ready to play a game? First of all, tell me your name');
+var correctAnswers = 0;
+
 // First question
 
 var havePets = prompt('Do I have pets? (yes/no)');
@@ -7,6 +10,7 @@ console.log('Thinks that I have pets ' + havePets);
 
 if(havePets.toLowerCase() === 'yes'){
   alert('You are right!');
+  correctAnswers++;
 }
 else if (havePets.toLowerCase() === 'no'){
   alert('Sorry! You are wrong');
@@ -25,6 +29,7 @@ if(likeHiking.toLowerCase() === 'yes'){
 }
 else if (likeHiking.toLowerCase() === 'no'){
   alert('You are right, I hate hiking');
+  correctAnswers++;
 }
 else {
   alert('You didn\'t answer yes or no, so you lost a point');
@@ -40,6 +45,7 @@ if(favBand.toLowerCase() === 'yes'){
 }
 else if (favBand.toLowerCase() === 'no'){
   alert('Very real my friend. I don\'t think they are the best band on Earth, so you are right in this one!');
+  correctAnswers++;
 }
 else {
   alert('You didn\'t answer yes or no, so you lost a point');
@@ -52,6 +58,7 @@ console.log('Thinks I like Seattle weather ' + likeSeattle);
 
 if(likeSeattle.toLowerCase() === 'yes'){
   alert('I love the rain, so you guessed it right!');
+  correctAnswers++;
 }
 else if (likeSeattle.toLowerCase() === 'no'){
   alert('Oh please! The summer here is amazing! I love Seattle weather so you are wrong!');
@@ -70,6 +77,7 @@ if(favFood.toLowerCase() === 'yes'){
 }
 else if (favFood.toLowerCase() === 'no'){
   alert('DING DING! Correct! My favorite food is pasta ');
+  correctAnswers++;
 }
 else {
   alert('You didn\'t answer yes or no, so you lost a point');
@@ -83,16 +91,47 @@ var countriesLived = 2;
 var countriesAnswer = prompt('In how many countries have I lived in?');
 
 while(guesses !== numAttempts || countriesAnswer === countriesLived){
-  guesses++;
-  if(countriesAnswer < 2){
+  if(countriesAnswer < countriesLived){
     countriesAnswer = prompt('Too low! In how many countries have I lived in?');
   }
-  else if(countriesAnswer > 2){
+  else if(countriesAnswer > countriesLived){
     countriesAnswer = prompt('Too hi! In how many countries have I lived in?');
   }
+
+  if(parseInt(countriesAnswer) === countriesLived){
+    alert('You guessed!');
+    correctAnswers++;
+    break;
+  }
+
+  guesses++;
 }
 console.log('This person thinks I have lived in ' + countriesAnswer + 'countries');
 
 
 // Seventh question
 
+var catNames = ['chiri', 'tuya'];
+var catGuesses = 0;
+var catAttempts = 6;
+var catAnswer = '';
+
+while(catGuesses !== catAttempts) {
+  catAnswer = prompt('What is the name of one of my cats?');
+
+  if (catNames.includes(catAnswer.toLowerCase())) {
+    alert('YAY!');
+    correctAnswers++;
+    break;
+  }
+
+  catGuesses++;
+
+  if (catGuesses === catAttempts) {
+    alert('Nooo, so sad! My cats are: ' + catNames.join(' & '));
+    break;
+  }
+}
+console.log('This person thinks my cat name is ' + catAnswer);
+
+alert('Thanks for playing ' + askName + '! You got ' + correctAnswers + ' out of 7 questions correct!');
