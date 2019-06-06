@@ -87,7 +87,7 @@ else {
 
 var guesses = 0;
 var numAttempts = 3;
-var countriesLived = 2;
+var countriesLived = Math.round(Math.random() * 10) + 1;
 var countriesAnswer = prompt('In how many countries have I lived in?');
 
 while(guesses !== numAttempts || countriesAnswer === countriesLived){
