@@ -1,7 +1,7 @@
 'use strict';
 
 var askName = prompt('Are you ready to play a game? First of all, tell me your name');
-var correctAnswers = 0;
+var correctAnswers = 0; // this number is going to be increased everytime the code of winning a point runs
 
 // First question
 
@@ -87,7 +87,7 @@ else {
 
 var guesses = 0;
 var numAttempts = 3;
-var countriesLived = Math.round(Math.random() * 10) + 1;
+var countriesLived = Math.round(Math.random() * 10) + 1; // The +1 is in case the random rounds to 0. Can't be 0 countries
 var countriesAnswer = prompt('In how many countries have I lived in?');
 
 while(guesses !== numAttempts || countriesAnswer === countriesLived){
@@ -98,7 +98,7 @@ while(guesses !== numAttempts || countriesAnswer === countriesLived){
     countriesAnswer = prompt('Too hi! In how many countries have I lived in? (' + (numAttempts-guesses)+ ' attempts left)');
   }
 
-  if(parseInt(countriesAnswer) === countriesLived){
+  if(parseInt(countriesAnswer) === countriesLived){ // parseInt turns the string in the input into a number so it can be evaluated
     alert('You guessed!');
     correctAnswers++;
     break;
