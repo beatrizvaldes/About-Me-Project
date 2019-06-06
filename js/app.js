@@ -92,10 +92,10 @@ var countriesAnswer = prompt('In how many countries have I lived in?');
 
 while(guesses !== numAttempts || countriesAnswer === countriesLived){
   if(countriesAnswer < countriesLived){
-    countriesAnswer = prompt('Too low! In how many countries have I lived in?');
+    countriesAnswer = prompt('Too low! In how many countries have I lived in? (' + (numAttempts-guesses)+ ' attempts left)');
   }
   else if(countriesAnswer > countriesLived){
-    countriesAnswer = prompt('Too hi! In how many countries have I lived in?');
+    countriesAnswer = prompt('Too hi! In how many countries have I lived in? (' + (numAttempts-guesses)+ ' attempts left)');
   }
 
   if(parseInt(countriesAnswer) === countriesLived){
@@ -117,7 +117,7 @@ var catAttempts = 6;
 var catAnswer = '';
 
 while(catGuesses !== catAttempts) {
-  catAnswer = prompt('What is the name of one of my cats?');
+  catAnswer = prompt('What is the name of one of my cats? (' + (catAttempts-catGuesses)+ ' attempts left)');
 
   if (catNames.includes(catAnswer.toLowerCase())) {
     alert('YAY!');
