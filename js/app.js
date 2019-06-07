@@ -120,7 +120,7 @@ function question5() {
 var guesses = 0;
 var numAttempts = 3;
 var countriesLived = Math.round(Math.random() * 10) + 1; // The +1 is in case the random rounds to 0. Can't be 0 countries
-var countriesAnswer = prompt('In how many countries have I lived in?');
+var countriesAnswer = prompt('In how many countries have I lived in? Pick a number between 1 and 11');
 
 while(guesses !== numAttempts || countriesAnswer === countriesLived){
   if(countriesAnswer < countriesLived){
