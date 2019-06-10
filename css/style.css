@@ -6,6 +6,7 @@ body {
     background-size: cover;
     width: 100%;
     font-family: 'Noto Sans', sans-serif;
+    
 }
 
 h1 {
@@ -13,6 +14,7 @@ h1 {
     font-weight: bold;
     padding: 30px;
     text-align: center;
+
 }
 
 #mypic {
@@ -21,9 +23,10 @@ h1 {
     margin-right: auto;
     padding: 10px;
     width: 300px;
+
 }
 
-main {
+p {
     background-color:lightcyan;
     border-color: pink;
     border-style: groove;
@@ -33,6 +36,42 @@ main {
     margin-top: 50px;
     padding: 20px;
     text-align: center;
+
+}
+
+main {
+    margin-left: 200px;
+    margin-right: 200px;
+
+}
+
+
+div {
+    background-color: blue;
+    border-radius: 5px;
+    color: white;
+    display: inline-block;
+    margin: 10px;
+    padding: 20px;
+    width: 43%;
+
+}
+
+div h2 {
+    color: cyan;
+    margin-bottom: 10px;
+    font-size: 18px;
+
+}
+
+ol {
+    list-style-type: circle;
+
+}
+
+li {
+    margin: 5px;
+
 }
 
 footer {
@@ -43,4 +82,5 @@ footer {
     position: absolute;
     text-align: center;
     width: 100%;
+
 }
