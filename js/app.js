@@ -21,6 +21,8 @@ testQuestion(question2);
 testQuestion(question3);
 testQuestion(question4);
 testQuestion(question5);
+testQuestion(question6);
+testQuestion(question7);
 
 function question1() {
   var havePets = prompt('Do I have pets? (yes/no)');
@@ -117,53 +119,59 @@ function question5() {
 
 // Sixth Question
 
-var guesses = 0;
-var numAttempts = 3;
-var countriesLived = Math.round(Math.random() * 10) + 1; // The +1 is in case the random rounds to 0. Can't be 0 countries
-var countriesAnswer = prompt('In how many countries have I lived in? Pick a number between 1 and 11');
+function question6() {
+  var guesses = 0;
+  var numAttempts = 3;
+  var countriesLived = Math.round(Math.random() * 10) + 1; // The +1 is in case the random rounds to 0. Can't be 0 countries
+  var countriesAnswer = prompt('In how many countries have I lived in? Pick a number between 1 and 11');
 
-while(guesses !== numAttempts || countriesAnswer === countriesLived){
-  if(countriesAnswer < countriesLived){
-    countriesAnswer = prompt('Too low! In how many countries have I lived in? (' + (numAttempts-guesses)+ ' attempts left)');
-  }
-  else if(countriesAnswer > countriesLived){
-    countriesAnswer = prompt('Too hi! In how many countries have I lived in? (' + (numAttempts-guesses)+ ' attempts left)');
-  }
+  while(guesses !== numAttempts || countriesAnswer === countriesLived){
+    if(countriesAnswer < countriesLived){
+      countriesAnswer = prompt('Too low! In how many countries have I lived in? (' + (numAttempts-guesses)+ ' attempts left)');
+    }
+    else if(countriesAnswer > countriesLived){
+      countriesAnswer = prompt('Too hi! In how many countries have I lived in? (' + (numAttempts-guesses)+ ' attempts left)');
+    }
 
-  if(parseInt(countriesAnswer) === countriesLived){ // parseInt turns the string in the input into a number so it can be evaluated
-    alert('You guessed!');
-    correctAnswers++;
-    break;
-  }
+    if(parseInt(countriesAnswer) === countriesLived){ // parseInt turns the string in the input into a number so it can be evaluated
+      alert('You guessed!');
+      break;
+    }
 
-  guesses++;
+    guesses++;
+  }
+  console.log('This person thinks I have lived in ' + countriesAnswer + 'countries');
+
+  // retornar si respuesta es correcta o no
+  return parseInt(countriesAnswer) === countriesLived;
 }
-console.log('This person thinks I have lived in ' + countriesAnswer + 'countries');
-
 
 // Seventh question
 
-var catNames = ['chiri', 'tuya'];
-var catGuesses = 0;
-var catAttempts = 6;
-var catAnswer = '';
+function question7(){
+  var catNames = ['chiri', 'tuya'];
+  var catGuesses = 0;
+  var catAttempts = 6;
+  var catAnswer = '';
 
-while(catGuesses !== catAttempts) {
-  catAnswer = prompt('What is the name of one of my cats? (' + (catAttempts-catGuesses)+ ' attempts left)');
+  while(catGuesses !== catAttempts) {
+    catAnswer = prompt('What is the name of one of my cats? (' + (catAttempts-catGuesses)+ ' attempts left)');
 
-  if (catNames.includes(catAnswer.toLowerCase())) {
-    alert('YAY!');
-    correctAnswers++;
-    break;
+    if (catNames.includes(catAnswer.toLowerCase())) {
+      alert('YAY!');
+      break;
+    }
+
+    catGuesses++;
+
+    if (catGuesses === catAttempts) {
+      alert('Nooo, so sad! My cats are: ' + catNames.join(' & '));
+      break;
+    }
   }
+  console.log('This person thinks my cat name is ' + catAnswer);
 
-  catGuesses++;
-
-  if (catGuesses === catAttempts) {
-    alert('Nooo, so sad! My cats are: ' + catNames.join(' & '));
-    break;
-  }
+  return (catNames.includes(catAnswer.toLowerCase()));
 }
-console.log('This person thinks my cat name is ' + catAnswer);
 
 alert('Thanks for playing ' + userName + '! You got ' + correctAnswers + ' out of 7 questions correct!');
